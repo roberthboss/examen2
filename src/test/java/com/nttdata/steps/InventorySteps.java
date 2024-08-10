@@ -20,6 +20,7 @@ public class InventorySteps {
      * @return el valor del título de la pantalla de productos
      */
     public String getTitle(){
+
         return this.driver.findElement(InventoryPage.productsTitle).getText();
     }
 

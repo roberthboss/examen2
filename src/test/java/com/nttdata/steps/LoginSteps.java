@@ -15,6 +15,7 @@ public class LoginSteps {
 
     //constructor
     public LoginSteps(WebDriver driver){
+
         this.driver = driver;
     }
 
@@ -26,7 +27,7 @@ public class LoginSteps {
         WebElement userInputElement = driver.findElement(LoginPage.userInput);
         userInputElement.sendKeys(user);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(444));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(400));
         wait.until(ExpectedConditions.visibilityOfElementLocated(LoginPage.loginButton));
 
 
@@ -44,6 +45,7 @@ public class LoginSteps {
      * Hacer click en el botón login
      */
     public void login(){
+
         this.driver.findElement(LoginPage.loginButton).click();
     }
 
